@@ -1,0 +1,38 @@
+﻿<Window x:Class="SfDataGridDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:local="clr-namespace:SfDataGridDemo"
+        Title="SfDataGrid Demo"        
+        Icon="App.ico"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <syncfusion:SfDataGrid x:Name="sfDataGrid"                                
+                               AllowDraggingRows="True"  
+                               AllowResizingColumns="True"
+                               AllowDrop="True"
+                               ColumnSizer="Star"
+                               ShowGroupDropArea="True"
+                               ItemsSource="{Binding Orders}"
+                               AutoGenerateColumns="False">
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:GridTextColumn MappingName="OrderID"/>
+                <syncfusion:GridTextColumn MappingName="CustomerID" />
+                <syncfusion:GridTextColumn MappingName="CustomerName" />
+                <syncfusion:GridTextColumn MappingName="Country" />
+                <syncfusion:GridTextColumn MappingName="UnitPrice"/>
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+        <StackPanel Grid.Column="1">
+            <Label Content="Target Record" HorizontalAlignment="Center"/>
+            <TextBox x:Name="txtDisplayRecord" />
+        </StackPanel>
+    </Grid>
+</Window>
