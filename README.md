@@ -1,9 +1,10 @@
 # How to get the target record when drop the row in WPF DataGrid(SfDataGrid)?	
 
 ## About the sample
-This example illustrates how to get the target record when drop the row in WPF DataGrid(SfDataGrid)?
 
-By default, SfDataGrid does not provide the direct support to get the target record which is going to drop. You can get the target record which is going to drop by using SfDataGrid.RowDragDropController.Drop event.
+This example illustrates how to get the target record when drop the row in [WPF DataGrid](https://www.syncfusion.com/wpf-ui-controls/datagrid) (SfDataGrid)?
+
+[WPF DataGrid](https://www.syncfusion.com/wpf-ui-controls/datagrid) (SfDataGrid) does not provide the direct support to get the target record which is going to drop. You can get the target record which is going to drop by using [SfDataGrid.RowDragDropController.Drop](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfGrid.WPF~Syncfusion.UI.Xaml.Grid.GridRowDragDropController~Drop_EV.html) event.
 
 ```C#
 sfDataGrid.RowDragDropController.Drop += RowDragDropController_Drop;
