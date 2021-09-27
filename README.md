@@ -29,5 +29,7 @@ private void RowDragDropController_Drop(object sender, GridRowDropEventArgs e)
 
 ```
 
+KB article - [How to get the target record when drop the row in WPF DataGrid(SfDataGrid)?](https://www.syncfusion.com/kb/11377/how-to-get-the-target-record-when-drop-the-row-in-wpf-datagrid-sfdatagrid)
+
 ## Requirements to run the demo
 Visual Studio 2015 and above versions
